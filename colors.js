@@ -14,11 +14,11 @@ for (var i = 0; i < 5000; i++) {
   // append the element to ul#dois
   ds.append(li);
 
-  // add an event listener to each list item; clicking any of them
-  // will log its color, in rgb() notation, to the browser's
-  // JavaScript console
-  li.addEventListener('click', function(event) {
-    console.log('The bar you clicked is', event.target.style.backgroundColor)
-  });
-
 }
+
+// add an event listener to the whole list; clicking any individual
+// item will still log its color, in rgb() notation, to the browser's
+// JavaScript console
+ds.addEventListener('click', function(event) {
+  console.log('The bar you clicked is', event.target.style.backgroundColor)
+});
